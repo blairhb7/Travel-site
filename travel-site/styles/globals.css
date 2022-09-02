@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+@font-face {
+    font-family: "outline";
+    src: url('../fonts/AMERTO__.TTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.LandingVid {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: -2;
+   position: absolute;
+}
+
+.SlideShow {
+    object-fit: cover;
+    height:100vh; 
+    width: 100vw;
+}
+
+
+.Japan {
+    background-image: url('/japan.jpg');
+    background-size: cover;
+}
+
+.Hawaii {
+    background-image: url('/hawaii.jpg');
+    background-size: cover;
+}
+.Paris {
+    background-image: url('/paris.jpg');
+    background-size: cover;
+}
+
+.Norway {
+    background-image: url('/norway.jpg');
+    background-size: cover;
+}
+
+.Mexico {
+    background-image: url('/mexico.jpg');
+    background-size: cover;
+}
+
+.London {
+    background-image: url('/london.jpg');
+    background-size: cover;
+}
+
+.Spain {
+    background-image: url('/spain.jpg');
+    background-size: cover;
+}
+.China {
+    background-image: url('/china.jpg');
+    background-size: cover;
+}
+.Miami {
+    background-image: url('/miami.jpg');
+    background-size: cover;
+}
+.Africa {
+    background-image: url('/africa.jpg');
+    background-size: cover;
+}
+.Italy {
+    background-image: url('/i.jpg');
+    background-size: cover;
+}
+.Saudi {
+    background-image: url('/s.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.Bahamas {
+    background-image: url('/b.jpg');
+    background-size: cover;
+}
+.Dubai {
+    background-image: url('/D.jpg');
+    background-size: cover;
+}
+
+.graybg {
+    background-image: url('/Trianglify-4s-3000px.svg');
+    background-size: cover;
+}
+
+.animation {
+    -webkit-transition: -webkit-transform .5s ease-in;
+    transition: -webkit-transform .5s ease-in;
+    -o-transition: transform .5s ease-in;
+    transition: transform .5s ease-in;
+    transition: transform .5s ease-in, -webkit-transform .5s 
+}
+
+.navbar {
+    width: 100%;
+    align-items: center;
+    
+}
+
+
+
+.menu li {
+    padding: 1rem;
+}
+
+
+
+    
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top:0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 40;
+        transition: left 1s;
+
+    }
+
+    .active {
+        left: 0;
+        display: flex;
+    }
+
+
+    
