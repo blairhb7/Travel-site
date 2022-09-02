@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import 'animate.css'
 import { ArrowUpIcon, MapPinIcon, MapIcon } from '@heroicons/react/24/solid'
 
 
