@@ -11,7 +11,7 @@ const Banner = () => {
   return (
     <section className="h-screen w-screen xl:flex ">
       <div className="">
-        <video src="/vid.mp4" className='LandingVid ' autoPlay loop muted></video>
+        <video src="/video.mp4" className='LandingVid ' autoPlay loop muted></video>
       </div>
       <div className=" font-bold xl:flex flex  w-screen h-screen ">
         <div className="flex flex-col justify-center overflow-hidden xl:justify-end pb-32">

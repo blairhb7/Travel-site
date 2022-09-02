@@ -12,6 +12,7 @@ import Link from 'next/link';
 import { HiChevronLeft, HiChevronRight, } from  "react-icons/hi";
 import { setRevalidateHeaders } from 'next/dist/server/send-payload';
 import SliderArrow, { slideLeft, slideRight } from '../Components/SliderArrow'
+import HorizontalScroll from 'react-scroll-horizontal';
 
 interface Props {
   posts:[Post]
@@ -26,11 +27,10 @@ const [expand, setExpand] = useState(false)
   }, [])
 
   const scrollRef = useHorizontalScroll()
-  const ref = useRef
+  const ref = useRef<HTMLDivElement>(null)
   
- 
+ interface Props {id: string }
 
-  
 
   
 
@@ -42,7 +42,7 @@ const [expand, setExpand] = useState(false)
       <div className="flex flex-col xl:h-screen w-screen xl:w-full "> 
         <div className="bg-black h-40 w-full"></div>
         <div data-aos="slide-right"   data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className=" flex flex-col pt-10 xl:pt-[200px] break-normal "> 
-            <h1   className=" xl:text-6xl lg:text-4xl uppercase pt-4 px-10 font-extrabold  animate-in text-3xl slide-in-from-left  flex flex-col hover:text-yellow-500 duration-500">Popular Destinations</h1>
+            <h1   className=" xl:text-6xl lg:text-4xl uppercase pt-4 px-10 font-extrabold  animate-in text-3xl slide-in-from-left  flex flex-col hover:text-yellow-500 duration-500 break-normal">Popular Destinations</h1>
             <div className="flex">
                 <h2 className="uppercase px-10 font-medium ">Scroll Right For More</h2>
                 <ArrowRightIcon className='h-6 w-9'/>
@@ -59,9 +59,8 @@ const [expand, setExpand] = useState(false)
         </div>
         
       </div> 
-      <div ref={scrollRef} id='slider'   className=" scroll-smooth overflow-y-scroll overflow-x-scroll flex flex-col  scrollbar-hide w-full scroll col-span-2 "> 
+      <HorizontalScroll     className={`slider scroll-smooth overflow-y-scroll overflow-x-scroll flex flex-col  scrollbar-hide w-full scroll col-span-2`} > 
           <div data-aos="fade-up"  data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className=" md:grid-col-2 animate-in slide-in-from-bottom duration-1000  flex flex-row w-[5000px]  ">
-          <HiChevronLeft onClick={slideLeft}  className='w-28 h-screen cursor-pointer text-white  absolute z-50 content-center ' />
             {posts.map((post) => (
               <Link key={post.id} className='' href={`/post/${post.slug.current}`}> 
                 <div className= {` h-screen relative transition-transform  overflow-hidden`} >
@@ -71,8 +70,7 @@ const [expand, setExpand] = useState(false)
               </Link>
             ))}
           </div>
-       <HiChevronRight  className='w-28 h-screen cursor-pointer right-2 xl:right-20 text-white  absolute z-50  ' onClick={slideRight}/>
-        </div>
+s      </HorizontalScroll>
     </div>
   )
 }
