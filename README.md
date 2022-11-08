@@ -20,4 +20,4 @@
 </div>
 
 <h1> View Live Demo </h1>
-<a style="color: #e3bb1c;" href="https://travel-life-psi.vercel.app/"><h3 style="color: #e3bb1c;">TRAVEL LIFE </h3></a>
+<h3 style="color: #e3bb1c;"><a style="color: #e3bb1c;" href="https://travel-life-psi.vercel.app/">TRAVEL LIFE </a> </h3>
