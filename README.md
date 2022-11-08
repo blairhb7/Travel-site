@@ -21,3 +21,6 @@
 
 <h1> View Live Demo </h1>
 <h3 style="color: #e3bb1c;"><a style="color: #e3bb1c;" href="https://travel-life-psi.vercel.app/">TRAVEL LIFE </a> </h3>
+
+<br></br>
+![travel mexico](https://user-images.githubusercontent.com/88805312/200651197-a1aa4765-b812-4d55-bd14-fc0f3fe87de0.png)
